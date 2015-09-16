@@ -21,9 +21,9 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.create(article_params)
-    redirect_to article_path(@article)
 
     flash.notice = "'#{@article.title}' was created!"
+    redirect_to article_path(@article)
   end
 
   def update
